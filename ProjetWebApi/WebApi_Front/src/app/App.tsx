@@ -1,12 +1,13 @@
-import React from 'react';
-import { RouterProvider } from 'react-router-dom';
-import { router } from './routes/routes';
+import SideBar from '../pages/SideBar';
 
 function App() {
   return (
-    <div className="App">
-      <RouterProvider router={router} />
-    </div>
+    <>
+      <div style={{ display: 'flex' }}>
+        <SideBar />
+        <h1>Welcome to app</h1>
+      </div>
+    </>
   );
 }
 
