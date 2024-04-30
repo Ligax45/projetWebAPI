@@ -1,19 +1,22 @@
 import './App.css';
-import NavbarTuto from './components/NavbarTuto';
-import { Route, Routes } from 'react-router-dom';
-import { About, Contact, Services, Home } from './pages';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import Dashboard from './pages/Dashboard';
+import Contact from './pages/Contact';
+import Subscription from './pages/Subscription';
 
 function App() {
   return (
     <>
       <div className="App">
-        <NavbarTuto />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
-        </Routes>
+        <BrowserRouter>
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/subscription" element={<Subscription />} />
+          </Routes>
+        </BrowserRouter>
       </div>
     </>
   );
