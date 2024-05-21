@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using ProjetWebApi.Data.DbContext;
+using ProjetWebApi.Data.DatabaseContext;
 
 #nullable disable
 
@@ -21,7 +21,7 @@ namespace ProjetWebApi.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("ProjetWebApi.Models.Profil", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profil", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -47,7 +47,7 @@ namespace ProjetWebApi.Migrations
                     b.ToTable("profil");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Models.Utilisateur", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Utilisateur", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -71,9 +71,9 @@ namespace ProjetWebApi.Migrations
                     b.ToTable("utilisateur");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Models.Profil", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profil", b =>
                 {
-                    b.HasOne("ProjetWebApi.Models.Utilisateur", "Utilisateur")
+                    b.HasOne("ProjetWebApi.Data.Entities.Utilisateur", "Utilisateur")
                         .WithMany()
                         .HasForeignKey("Utilisateurid")
                         .OnDelete(DeleteBehavior.Cascade)

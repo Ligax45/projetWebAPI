@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\ProjetWebApi",
-    "\\ProjetWebApi\\ProjetWebApi",
-    "\\ProjetWebApi\\ProjetWebApi\\Controllers",
-    "\\ProjetWebApi\\ProjetWebApi\\Models"
+    "\\ProjetWebApi\\ProjetWebApi\\Data\\DatabaseContext",
+    "\\ProjetWebApi\\ProjetWebApi\\Data\\Entities"
   ],
-  "SelectedNode": "\\ProjetWebApi\\ProjetWebApi\\Controllers\\ValuesController.cs",
+  "SelectedNode": "\\ProjetWebApi\\ProjetWebApi.sln",
   "PreviewInSolutionExplorer": false
 }

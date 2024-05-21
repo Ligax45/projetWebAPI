@@ -9,7 +9,7 @@ namespace ProjetWebApi.Data.Entities
         [Key, Required]
         public int id { get; set; }
         public virtual Utilisateur Utilisateur { get; set; }
-        public string nom { get; set; }
-        public string prenom { get; set; }
+        public string nom { get; set; } = string.Empty;
+        public string prenom { get; set; } = string.Empty;
     }
 }

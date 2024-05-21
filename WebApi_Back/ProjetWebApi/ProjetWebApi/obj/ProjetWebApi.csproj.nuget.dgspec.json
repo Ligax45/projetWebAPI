@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi _Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj": {}
+    "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi _Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj": {
+    "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi _Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj",
         "projectName": "ProjetWebApi",
-        "projectPath": "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi _Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj",
+        "projectPath": "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj",
         "packagesPath": "C:\\Users\\Clement\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi _Back\\ProjetWebApi\\ProjetWebApi\\obj\\",
+        "outputPath": "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

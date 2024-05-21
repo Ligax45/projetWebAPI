@@ -11,8 +11,8 @@ using ProjetWebApi.Data.DatabaseContext;
 namespace ProjetWebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240520090605_UpdateReference")]
-    partial class UpdateReference
+    [Migration("20240521193140_up")]
+    partial class up
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace ProjetWebApi.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("ProjetWebApi.Models.Profil", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profil", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -50,7 +50,7 @@ namespace ProjetWebApi.Migrations
                     b.ToTable("profil");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Models.Utilisateur", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Utilisateur", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -74,9 +74,9 @@ namespace ProjetWebApi.Migrations
                     b.ToTable("utilisateur");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Models.Profil", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profil", b =>
                 {
-                    b.HasOne("ProjetWebApi.Models.Utilisateur", "Utilisateur")
+                    b.HasOne("ProjetWebApi.Data.Entities.Utilisateur", "Utilisateur")
                         .WithMany()
                         .HasForeignKey("Utilisateurid")
                         .OnDelete(DeleteBehavior.Cascade)
