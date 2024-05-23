@@ -10,6 +10,5 @@ namespace ProjetWebApi.Data.Entities
         public int id { get; set; }
         public string email { get; set; } = string.Empty;
         public string mdp { get; set; } = string.Empty;
-        public int age { get; set; }
     }
 }

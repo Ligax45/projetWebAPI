@@ -23,11 +23,15 @@ namespace ProjetWebApi.Models
             {
                 email = row.email,
                 mdp = row.mdp,
-                age = row.age,
             }));
             return response;
         }
 
+        /// <summary>
+        /// GetById
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public UtilisateurModel GetUtilisateurById(int id)
         {
             UtilisateurModel response = new UtilisateurModel();
@@ -36,7 +40,6 @@ namespace ProjetWebApi.Models
             {
                 email = row.email,
                 mdp = row.mdp,
-                age = row.age,
             };
         }
 
@@ -55,7 +58,6 @@ namespace ProjetWebApi.Models
                 {
                     dbTable.email = utilisateurModel.email;
                     dbTable.mdp = utilisateurModel.mdp;
-                    dbTable.age = utilisateurModel.age;
                 }
                 else
                 {
@@ -64,7 +66,6 @@ namespace ProjetWebApi.Models
                     {
                         email = utilisateurModel.email,
                         mdp = utilisateurModel.mdp,
-                        age = utilisateurModel.age
                     };
                 _context.Utilisateurs.Add(dbTable);
 

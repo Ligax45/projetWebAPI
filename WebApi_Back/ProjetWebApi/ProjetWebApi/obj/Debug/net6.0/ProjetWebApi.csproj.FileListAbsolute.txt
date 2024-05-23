@@ -108,3 +108,5 @@ C:\Users\Clement\Desktop\Développement_Web\Portfolio\ProjetWebApi\projetWebAPI\
 C:\Users\Clement\Desktop\Développement_Web\Portfolio\ProjetWebApi\projetWebAPI\WebApi_Back\ProjetWebApi\ProjetWebApi\obj\Debug\net6.0\ProjetWebApi.csproj.CopyComplete
 C:\Users\Clement\Desktop\Développement_Web\Portfolio\ProjetWebApi\projetWebAPI\WebApi_Back\ProjetWebApi\ProjetWebApi\obj\Debug\net6.0\ProjetWebApi.genruntimeconfig.cache
 C:\Users\Clement\Desktop\Développement_Web\Portfolio\ProjetWebApi\projetWebAPI\WebApi_Back\ProjetWebApi\ProjetWebApi\obj\Debug\net6.0\ref\ProjetWebApi.dll
+C:\Users\Clement\Desktop\Développement_Web\Portfolio\ProjetWebApi\projetWebAPI\WebApi_Back\ProjetWebApi\ProjetWebApi\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Clement\Desktop\Développement_Web\Portfolio\ProjetWebApi\projetWebAPI\WebApi_Back\ProjetWebApi\ProjetWebApi\bin\Debug\net6.0\StackExchange.Redis.dll
