@@ -11,8 +11,8 @@ using ProjetWebApi.Data.DatabaseContext;
 namespace ProjetWebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240520090605_UpdateReference")]
-    partial class UpdateReference
+    [Migration("20240617135729_FirstMigrationProjet")]
+    partial class FirstMigrationProjet
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,61 +24,61 @@ namespace ProjetWebApi.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("ProjetWebApi.Models.Profil", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profil", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Utilisateurid")
+                    b.Property<string>("Nom")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Prenom")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("UtilisateurId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("nom")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.HasKey("Id");
 
-                    b.Property<string>("prenom")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("Utilisateurid");
+                    b.HasIndex("UtilisateurId");
 
                     b.ToTable("profil");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Models.Utilisateur", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Utilisateur", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("age")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("email")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("mdp")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("id");
+                    b.Property<string>("Salt")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
 
                     b.ToTable("utilisateur");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Models.Profil", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profil", b =>
                 {
-                    b.HasOne("ProjetWebApi.Models.Utilisateur", "Utilisateur")
+                    b.HasOne("ProjetWebApi.Data.Entities.Utilisateur", "Utilisateur")
                         .WithMany()
-                        .HasForeignKey("Utilisateurid")
+                        .HasForeignKey("UtilisateurId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

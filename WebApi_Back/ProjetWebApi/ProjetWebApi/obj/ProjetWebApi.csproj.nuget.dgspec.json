@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj": {}
+    "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj": {
+    "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj",
         "projectName": "ProjetWebApi",
-        "projectPath": "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj",
-        "packagesPath": "C:\\Users\\Clement\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Clement\\Desktop\\Développement_Web\\Portfolio\\ProjetWebApi\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\obj\\",
+        "projectPath": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\ProjetWebApi.csproj",
+        "packagesPath": "C:\\Users\\clem-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Clement\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\clem-\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -65,6 +65,10 @@
               "target": "Package",
               "version": "[7.0.3, )"
             },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.7.33, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -81,24 +85,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.23, 6.0.23]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.23, 6.0.23]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.23, 6.0.23]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.23, 6.0.23]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -107,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

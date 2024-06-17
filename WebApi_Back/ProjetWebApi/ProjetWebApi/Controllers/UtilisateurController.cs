@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjetWebApi.Data.DatabaseContext;
+using ProjetWebApi.Data.Entities;
 using ProjetWebApi.Models;
+using ProjetWebApi.Repositories;
 
 namespace ProjetWebApi.Controllers
 {
@@ -8,22 +10,23 @@ namespace ProjetWebApi.Controllers
     public class UtilisateurController : ControllerBase
     {
         private readonly DbHelper _db;
+        private readonly UserRepository _userRepository;
+
         public UtilisateurController(DataContext dataContext)
         {
             _db = new DbHelper(dataContext);
+            _userRepository = new UserRepository();
         }
 
-
-        // GET: api/<UtilisateurController>
         [HttpGet]
-        [Route("api/[controller]/GetUtilisateurs")]
-        public IActionResult Get()
+        [Route("api/[controller]/GetAllUtilisateurs")]
+        public IActionResult GetAllUtilisateur()
         {
             ResponseType type = ResponseType.Success;
             try
             {
-                IEnumerable<UtilisateurModel> data = _db.GetUtilisateurs();
-                if(!data.Any())
+                IEnumerable<UtilisateurModel> data = _db.GetAllUtilisateurs();
+                if (!data.Any())
                 {
                     type = ResponseType.NotFound;
                 }
@@ -35,20 +38,32 @@ namespace ProjetWebApi.Controllers
             }
         }
 
-        // GET api/<UtilisateurController>/5
         [HttpGet]
-        [Route("api/[controller]/GetUtilisateurById/{id}")]
-        public IActionResult Get(int id)
+        [Route("api/[controller]/GetById/{id}")]
+        public IActionResult GetById(int id)
         {
-            ResponseType type = ResponseType.Success;
             try
             {
                 UtilisateurModel data = _db.GetUtilisateurById(id);
+
                 if (data == null)
                 {
-                    type = ResponseType.NotFound;
+                    Utilisateur utilisateur = _userRepository.GetUser(id);
+                    if (utilisateur == null)
+                    {
+                        return NotFound();
+                    }
+
+                    data = new UtilisateurModel
+                    {
+                        Id = utilisateur.Id,
+                        Email = utilisateur.Email,
+                        Password = utilisateur.Password,
+                        Salt = utilisateur.Salt,
+                    };
                 }
-                return Ok(ResponseHandler.GetAppResponse(type, data));
+
+                return Ok(ResponseHandler.GetAppResponse(ResponseType.Success, data));
             }
             catch (Exception ex)
             {
@@ -56,16 +71,28 @@ namespace ProjetWebApi.Controllers
             }
         }
 
-        // POST api/<UtilisateurController>
         [HttpPost]
-        [Route("api/[controller]/SaveUtilisateur")]
-        public IActionResult Post([FromBody] UtilisateurModel model)
+        [Route("api/[controller]/CreateUtilisateur")]
+        public IActionResult CreateUtilisateur([FromBody] UtilisateurModel model)
         {
             try
             {
-                ResponseType type = ResponseType.Success;
-                _db.SaveUtilisateur(model);
-                return Ok(ResponseHandler.GetAppResponse(type, model));
+                // Logique de sauvegarde de la Bdd PostgreSQL
+                string salt;
+                model.Password = PasswordHasher.HashPassword(model.Password, out salt);
+                _db.CreateUtilisateur(model, salt);
+
+                // Logique de sauvegarde dans Redis
+                var utilisateurEntity = new Utilisateur
+                {
+                    Id = model.Id,
+                    Email = model.Email,
+                    Password = model.Password,
+                    Salt = salt,
+                };
+                _userRepository.CreateUser(utilisateurEntity);
+
+                return Ok(ResponseHandler.GetAppResponse(ResponseType.Success, model));
             }
             catch (Exception ex)
             {
@@ -73,15 +100,26 @@ namespace ProjetWebApi.Controllers
             }
         }
 
-        // PUT api/<UtilisateurController>/5
         [HttpPut]
         [Route("api/[controller]/UpdateUtilisateur")]
-        public IActionResult Put([FromBody] UtilisateurModel model)
+        public IActionResult UpdateUtilisateur([FromBody] UtilisateurModel model)
         {
             try
             {
                 ResponseType type = ResponseType.Success;
-                _db.SaveUtilisateur(model);
+                string salt;
+                model.Password = PasswordHasher.HashPassword(model.Password, out salt);
+                _db.UpdateUtilisateur(model, salt);
+
+                var utilisateurEntity = new Utilisateur
+                {
+                    Id = model.Id,
+                    Email = model.Email,
+                    Password = model.Password,
+                    Salt = salt,
+                };
+                _userRepository.UpdateUser(utilisateurEntity);
+
                 return Ok(ResponseHandler.GetAppResponse(type, model));
             }
             catch (Exception ex)
@@ -90,15 +128,15 @@ namespace ProjetWebApi.Controllers
             }
         }
 
-        // DELETE api/<UtilisateurController>/5
         [HttpDelete]
         [Route("api/[controller]/DeleteUtilisateur/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult DeleteUtilisateur(int id)
         {
             try
             {
                 ResponseType type = ResponseType.Success;
                 _db.DeleteUtilisateur(id);
+                _userRepository.DeleteUser(id);
                 return Ok(ResponseHandler.GetAppResponse(type, "Suppression réussie."));
             }
             catch (Exception ex)

@@ -7,9 +7,9 @@ namespace ProjetWebApi.Data.Entities
     public class Profil
     {
         [Key, Required]
-        public int id { get; set; }
+        public int Id { get; set; }
         public virtual Utilisateur Utilisateur { get; set; }
-        public string nom { get; set; } = string.Empty;
-        public string prenom { get; set; } = string.Empty;
+        public string Nom { get; set; } = string.Empty;
+        public string Prenom { get; set; } = string.Empty;
     }
 }

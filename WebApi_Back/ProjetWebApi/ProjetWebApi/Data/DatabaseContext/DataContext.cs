@@ -9,5 +9,6 @@ namespace ProjetWebApi.Data.DatabaseContext
 
         public DbSet<Utilisateur> Utilisateurs { get; set; }
         public DbSet<Profil> Profils { get; set; }
+        public DbSet<Annonce> Annonces { get; set; }
     }
 }

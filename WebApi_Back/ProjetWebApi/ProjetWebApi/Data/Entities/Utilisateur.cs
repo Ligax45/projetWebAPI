@@ -7,9 +7,9 @@ namespace ProjetWebApi.Data.Entities
     public class Utilisateur
     {
         [Key, Required]
-        public int id { get; set; }
-        public string email { get; set; } = string.Empty;
-        public string mdp { get; set; } = string.Empty;
-        public int age { get; set; }
+        public int Id { get; set; }
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public string? Salt {  get; set; }
     }
 }

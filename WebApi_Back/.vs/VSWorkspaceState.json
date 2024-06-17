@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\ProjetWebApi",
-    "\\ProjetWebApi\\ProjetWebApi\\Data\\DatabaseContext",
-    "\\ProjetWebApi\\ProjetWebApi\\Data\\Entities"
+    "\\ProjetWebApi\\ProjetWebApi",
+    "\\ProjetWebApi\\ProjetWebApi\\Data",
+    "\\ProjetWebApi\\ProjetWebApi\\Data\\Migrations",
+    "\\ProjetWebApi\\ProjetWebApi\\Repositories"
   ],
-  "SelectedNode": "\\ProjetWebApi\\ProjetWebApi.sln",
+  "SelectedNode": "\\ProjetWebApi\\ProjetWebApi\\Data\\Migrations\\20240524095028_salt.cs",
   "PreviewInSolutionExplorer": false
 }
