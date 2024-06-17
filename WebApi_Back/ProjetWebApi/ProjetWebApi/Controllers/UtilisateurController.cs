@@ -19,13 +19,21 @@ namespace ProjetWebApi.Controllers
         }
 
         [HttpGet]
+<<<<<<< HEAD
         [Route("api/[controller]/GetAllUtilisateurs")]
+=======
+        [Route("api/[controller]/GetUtilisateurs")]
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
         public IActionResult GetAllUtilisateur()
         {
             ResponseType type = ResponseType.Success;
             try
             {
+<<<<<<< HEAD
                 IEnumerable<UtilisateurModel> data = _db.GetAllUtilisateurs();
+=======
+                IEnumerable<UtilisateurModel> data = _db.GetUtilisateurs();
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
                 if (!data.Any())
                 {
                     type = ResponseType.NotFound;
@@ -39,7 +47,11 @@ namespace ProjetWebApi.Controllers
         }
 
         [HttpGet]
+<<<<<<< HEAD
         [Route("api/[controller]/GetById/{id}")]
+=======
+        [Route("api/[controller]/GetUtilisateurById/{id}")]
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
         public IActionResult GetById(int id)
         {
             try
@@ -56,10 +68,16 @@ namespace ProjetWebApi.Controllers
 
                     data = new UtilisateurModel
                     {
+<<<<<<< HEAD
                         Id = utilisateur.Id,
                         Email = utilisateur.Email,
                         Password = utilisateur.Password,
                         Salt = utilisateur.Salt,
+=======
+                        id = utilisateur.id,
+                        email = utilisateur.email,
+                        mdp = utilisateur.mdp
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
                     };
                 }
 
@@ -72,12 +90,18 @@ namespace ProjetWebApi.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         [Route("api/[controller]/CreateUtilisateur")]
         public IActionResult CreateUtilisateur([FromBody] UtilisateurModel model)
+=======
+        [Route("api/[controller]/SaveUtilisateur")]
+        public IActionResult PostUtilisateur([FromBody] UtilisateurModel model)
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
         {
             try
             {
                 // Logique de sauvegarde de la Bdd PostgreSQL
+<<<<<<< HEAD
                 string salt;
                 model.Password = PasswordHasher.HashPassword(model.Password, out salt);
                 _db.CreateUtilisateur(model, salt);
@@ -89,6 +113,16 @@ namespace ProjetWebApi.Controllers
                     Email = model.Email,
                     Password = model.Password,
                     Salt = salt,
+=======
+                _db.SaveUtilisateur(model);
+
+                // Logique de sauvegardedans Redis
+                var utilisateurEntity = new Utilisateur
+                {
+                    id = model.id,
+                    email = model.email,
+                    mdp = model.mdp,
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
                 };
                 _userRepository.CreateUser(utilisateurEntity);
 
@@ -102,11 +136,16 @@ namespace ProjetWebApi.Controllers
 
         [HttpPut]
         [Route("api/[controller]/UpdateUtilisateur")]
+<<<<<<< HEAD
         public IActionResult UpdateUtilisateur([FromBody] UtilisateurModel model)
+=======
+        public IActionResult PutUtilisateur([FromBody] UtilisateurModel model)
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
         {
             try
             {
                 ResponseType type = ResponseType.Success;
+<<<<<<< HEAD
                 string salt;
                 model.Password = PasswordHasher.HashPassword(model.Password, out salt);
                 _db.UpdateUtilisateur(model, salt);
@@ -117,6 +156,15 @@ namespace ProjetWebApi.Controllers
                     Email = model.Email,
                     Password = model.Password,
                     Salt = salt,
+=======
+                _db.SaveUtilisateur(model);
+
+                var utilisateurEntity = new Utilisateur
+                {
+                    id = model.id,
+                    email = model.email,
+                    mdp = model.mdp,
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
                 };
                 _userRepository.UpdateUser(utilisateurEntity);
 

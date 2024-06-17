@@ -17,19 +17,30 @@ namespace ProjetWebApi.Models
             var dataList = _context.Utilisateurs.ToList();
             dataList.ForEach(row => response.Add(new UtilisateurModel()
             {
+<<<<<<< HEAD
                 Id = row.Id,
                 Email = row.Email,
                 Password = row.Password,
                 Salt = row.Salt,
+=======
+                email = row.email,
+                mdp = row.mdp,
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
             }));
             return response;
         }
 
+        /// <summary>
+        /// GetById
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public UtilisateurModel GetUtilisateurById(int id)
         {
             var row = _context.Utilisateurs.FirstOrDefault(d => d.Id == id);
             if (row != null)
             {
+<<<<<<< HEAD
                 return new UtilisateurModel()
                 {
                     Id = row.Id,
@@ -39,12 +50,18 @@ namespace ProjetWebApi.Models
                 };
             }
             return null;
+=======
+                email = row.email,
+                mdp = row.mdp,
+            };
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
         }
 
         public void CreateUtilisateur(UtilisateurModel utilisateurModel, string salt)
         {
             Utilisateur dbTable = new Utilisateur
             {
+<<<<<<< HEAD
                 Email = utilisateurModel.Email,
                 Password = utilisateurModel.Password,
                 Salt = salt
@@ -63,6 +80,24 @@ namespace ProjetWebApi.Models
                 dbTable.Email = utilisateurModel.Email;
                 dbTable.Password = utilisateurModel.Password;
                 dbTable.Salt = salt;
+=======
+                //PUT
+                dbTable = _context.Utilisateurs.Where(d => d.id.Equals(utilisateurModel.id)).FirstOrDefault();
+                if(dbTable != null)
+                {
+                    dbTable.email = utilisateurModel.email;
+                    dbTable.mdp = utilisateurModel.mdp;
+                }
+                else
+                {
+                    //POST
+                    dbTable = new Utilisateur
+                    {
+                        email = utilisateurModel.email,
+                        mdp = utilisateurModel.mdp,
+                    };
+                _context.Utilisateurs.Add(dbTable);
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
 
                 _context.SaveChanges();
             }

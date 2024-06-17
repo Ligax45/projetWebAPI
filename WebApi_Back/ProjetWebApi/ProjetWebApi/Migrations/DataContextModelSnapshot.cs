@@ -85,7 +85,11 @@ namespace ProjetWebApi.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+<<<<<<< HEAD:WebApi_Back/ProjetWebApi/ProjetWebApi/Migrations/DataContextModelSnapshot.cs
                     b.Property<string>("Email")
+=======
+                    b.Property<string>("email")
+>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de:WebApi_Back/ProjetWebApi/ProjetWebApi/Data/Migrations/DataContextModelSnapshot.cs
                         .IsRequired()
                         .HasColumnType("text");
 
