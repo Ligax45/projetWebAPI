@@ -3,10 +3,10 @@
     "",
     "\\ProjetWebApi",
     "\\ProjetWebApi\\ProjetWebApi",
+    "\\ProjetWebApi\\ProjetWebApi\\Controllers",
     "\\ProjetWebApi\\ProjetWebApi\\Data",
-    "\\ProjetWebApi\\ProjetWebApi\\Data\\Migrations",
     "\\ProjetWebApi\\ProjetWebApi\\Repositories"
   ],
-  "SelectedNode": "\\ProjetWebApi\\ProjetWebApi\\Data\\Migrations\\20240524095028_salt.cs",
+  "SelectedNode": "\\ProjetWebApi\\ProjetWebApi\\Controllers\\UtilisateurController.cs",
   "PreviewInSolutionExplorer": false
 }
