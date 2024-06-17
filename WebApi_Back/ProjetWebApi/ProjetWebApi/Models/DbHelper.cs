@@ -68,24 +68,6 @@ namespace ProjetWebApi.Models
                 dbTable.Email = utilisateurModel.Email;
                 dbTable.Password = utilisateurModel.Password;
                 dbTable.Salt = salt;
-//=======
-//                //PUT
-//                dbTable = _context.Utilisateurs.Where(d => d.id.Equals(utilisateurModel.id)).FirstOrDefault();
-//                if(dbTable != null)
-//                {
-//                    dbTable.email = utilisateurModel.email;
-//                    dbTable.mdp = utilisateurModel.mdp;
-//                }
-//                else
-//                {
-//                    //POST
-//                    dbTable = new Utilisateur
-//                    {
-//                        email = utilisateurModel.email,
-//                        mdp = utilisateurModel.mdp,
-//                    };
-//                _context.Utilisateurs.Add(dbTable);
-//>>>>>>> a0d22eb8b541443e64cd8e1363f5175b164539de
 
                 _context.SaveChanges();
             }

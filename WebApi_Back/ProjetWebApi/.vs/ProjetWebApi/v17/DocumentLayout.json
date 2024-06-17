@@ -3,19 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\controllers\\testeredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\controllers\\testeredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\models\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -24,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,86 +30,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AQIAAIsVAAAAAAAAAAAmwKUVAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-06-17T15:44:45.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Migrations\\DataContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "ProjetWebApi\\Migrations\\DataContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Migrations\\DataContextModelSnapshot.cs",
-              "RelativeToolTip": "ProjetWebApi\\Migrations\\DataContextModelSnapshot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T15:43:13.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TesteRedis.cs",
-              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\TesteRedis.cs",
-              "RelativeDocumentMoniker": "ProjetWebApi\\Controllers\\TesteRedis.cs",
-              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\TesteRedis.cs",
-              "RelativeToolTip": "ProjetWebApi\\Controllers\\TesteRedis.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T15:43:10.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "ProjetWebApi\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "ProjetWebApi\\Repositories\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T15:42:19.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DbHelper.cs",
-              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Models\\DbHelper.cs",
-              "RelativeDocumentMoniker": "ProjetWebApi\\Models\\DbHelper.cs",
-              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Models\\DbHelper.cs",
-              "RelativeToolTip": "ProjetWebApi\\Models\\DbHelper.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAowF0AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T15:40:48.438Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "DataContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "ProjetWebApi\\Migrations\\DataContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeToolTip": "ProjetWebApi\\Migrations\\DataContextModelSnapshot.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAQwFYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:43:13.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TesteRedis.cs",
+              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\TesteRedis.cs",
+              "RelativeDocumentMoniker": "ProjetWebApi\\Controllers\\TesteRedis.cs",
+              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\TesteRedis.cs",
+              "RelativeToolTip": "ProjetWebApi\\Controllers\\TesteRedis.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAEAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:43:10.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "ProjetWebApi\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "ProjetWebApi\\Repositories\\UserRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwCQAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:42:19.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbHelper.cs",
+              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Models\\DbHelper.cs",
+              "RelativeDocumentMoniker": "ProjetWebApi\\Models\\DbHelper.cs",
+              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Models\\DbHelper.cs",
+              "RelativeToolTip": "ProjetWebApi\\Models\\DbHelper.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAuwCAAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:40:48.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UtilisateurController.cs",
               "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\UtilisateurController.cs",
               "RelativeDocumentMoniker": "ProjetWebApi\\Controllers\\UtilisateurController.cs",
               "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\UtilisateurController.cs",
               "RelativeToolTip": "ProjetWebApi\\Controllers\\UtilisateurController.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAowH8AAAANAAAA",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAswH8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T15:36:22.022Z",
               "EditorCaption": ""
