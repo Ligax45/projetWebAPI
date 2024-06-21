@@ -15,7 +15,7 @@ namespace ProjetWebApi.Repositories
             _database = redis.GetDatabase();
         }
 
-        public void CreateUser(Utilisateur user)
+        public void CreateUser(User user)
         {
             long newId = _database.StringIncrement("user:id_counter");
 
@@ -26,13 +26,13 @@ namespace ProjetWebApi.Repositories
             _database.StringSet($"user:{user.Id}", json);
         }
 
-        public Utilisateur GetUser(int userId)
+        public User GetById(int userId)
         {
             var json = _database.StringGet($"user:{userId}");
-            return json.HasValue ? JsonConvert.DeserializeObject<Utilisateur>(json) : null;
+            return json.HasValue ? JsonConvert.DeserializeObject<User>(json) : null;
         }
 
-        public void UpdateUser(Utilisateur user)
+        public void UpdateUser(User user)
         {
             var json = JsonConvert.SerializeObject(user);
             _database.StringSet($"user:{user.Id}", json);

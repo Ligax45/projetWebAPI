@@ -1,134 +1,150 @@
-﻿//using Microsoft.AspNetCore.Http;
-//using Microsoft.AspNetCore.Mvc;
-//using ProjetWebApi.Data.DatabaseContext;
-//using ProjetWebApi.Data.Entities;
-//using ProjetWebApi.Models;
-//using ProjetWebApi.Repositories;
+﻿using Microsoft.AspNetCore.Mvc;
+using ProjetWebApi.Data.DatabaseContext;
+using ProjetWebApi.Data.Entities;
+using ProjetWebApi.Models;
+using ProjetWebApi.Repositories;
+using ProjetWebApi.Services;
+using ProjetWebApi.Utilities;
 
-//namespace ProjetWebApi.Controllers
-//{
-    
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class UserController : ControllerBase
-//    {
-//        private readonly DbHelper _db;
-//        private readonly UserRepository _userRepository;
+namespace ProjetWebApi.Controllers
+{
+    [ApiController]
+    public class UserController : ControllerBase
+    {
+        private readonly DbHelper _db;
+        private readonly UserRepository _userRepository;
 
-//        public UserController(DataContext dataContext, UserRepository userRepository)
-//        {
-//            _db = new DbHelper(dataContext);
-//            _userRepository = userRepository;
-//        }
+        public UserController(DataContext dataContext)
+        {
+            _db = new DbHelper(dataContext);
+            _userRepository = new UserRepository();
+        }
 
-//        // GET: api/user
-//        [HttpGet]
-//        public ActionResult<IEnumerable<UtilisateurModel>> Get()
-//        {
-//            ResponseType type = ResponseType.Success;
-//            try
-//            {
-//                IEnumerable<UtilisateurModel> users = _db.GetUtilisateurs();
-//                if (!users.Any())
-//                {
-//                    type = ResponseType.NotFound;
-//                }
-//                return Ok(ResponseHandler.GetAppResponse(type, users));
-//            }
-//            catch (Exception ex)
-//            {
-//                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
-//            }
-//        }
+        [HttpGet]
+        [Route("api/[controller]/GetAllUsers")]
+        public IActionResult GetAllUsers()
+        {
+            ResponseType type = ResponseType.Success;
+            try
+            {
+                IEnumerable<UserModel> data = _db.GetAllUsers();
+                if (!data.Any())
+                {
+                    type = ResponseType.NotFound;
+                }
+                return Ok(ResponseHandler.GetAppResponse(type, data));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
+            }
+        }
 
-//        // GET api/user/5
-//        [HttpGet("{id}")]
-//        public ActionResult<UtilisateurModel> Get(int id)
-//        {
-//            ResponseType type = ResponseType.Success;
-//            try
-//            {
-//                UtilisateurModel user = _db.GetUtilisateurById(id);
-//                if (user == null)
-//                {
-//                    type = ResponseType.NotFound;
-//                }
-//                return Ok(ResponseHandler.GetAppResponse(type, user));
-//            }
-//            catch (Exception ex)
-//            {
-//                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
-//            }
-//        }
+        [HttpGet]
+        [Route("api/[controller]/GetById/{id}")]
+        public IActionResult GetById(int id)
+        {
+            try
+            {
+                UserModel data = _db.GetUserById(id);
 
-//        // POST api/user
-//        [HttpPost]
-//        public ActionResult Post([FromBody] UtilisateurModel user)
-//        {
-//            try
-//            {
-//                ResponseType type = ResponseType.Success;
-//                _db.SaveUtilisateur(user);
+                if (data == null)
+                {
+                    User user = _userRepository.GetById(id);
+                    if (user == null)
+                    {
+                        return NotFound();
+                    }
 
-//                var utilisateurEntity = new Utilisateur
-//                {
-//                    id = user.id,
-//                    email = user.email,
-//                    mdp = user.mdp,
-//                };
-//                _userRepository.CreateUser(utilisateurEntity);
+                    data = new UserModel
+                    {
+                        Id = user.Id,
+                        Email = user.Email,
+                        Password = user.Password,
+                        Salt = user.Salt,
+                    };
+                }
 
-//                return CreatedAtAction(nameof(Get), new { user.id }, ResponseHandler.GetAppResponse(type, user));
-//            }
-//            catch (Exception ex)
-//            {
-//                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
-//            }
-//        }
+                return Ok(ResponseHandler.GetAppResponse(ResponseType.Success, data));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
+            }
+        }
 
-//        // PUT api/user/5
-//        [HttpPut("{id}")]
-//        public ActionResult Put(int id, [FromBody] UtilisateurModel user)
-//        {
-//            try
-//            {
-//                ResponseType type = ResponseType.Success;
-//                user.id = id;
-//                _db.SaveUtilisateur(user);
+        [HttpPost]
+        [Route("api/[controller]/CreateUser")]
+        public IActionResult CreateUser([FromBody] UserModel model)
+        {
+            try
+            {
+                // Logique de sauvegarde de la Bdd PostgreSQL
+                string salt;
+                model.Password = PasswordHasher.HashPassword(model.Password, out salt);
+                _db.CreateUser(model, salt);
 
-//                var utilisateurEntity = new Utilisateur
-//                {
-//                    id = user.id,
-//                    email = user.email,
-//                    mdp = user.mdp,
-//                };
-//                _userRepository.UpdateUser(utilisateurEntity);
+                // Logique de sauvegarde dans Redis
+                var utilisateurEntity = new User
+                {
+                    Id = model.Id,
+                    Email = model.Email,
+                    Password = model.Password,
+                    Salt = salt,
+                };
+                _userRepository.CreateUser(utilisateurEntity);
 
-//                return Ok(ResponseHandler.GetAppResponse(type, user));
-//            }
-//            catch (Exception ex)
-//            {
-//                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
-//            }
-//        }
+                return Ok(ResponseHandler.GetAppResponse(ResponseType.Success, model));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
+            }
+        }
 
-//        // DELETE api/user/5
-//        [HttpDelete("{id}")]
-//        public ActionResult Delete(int id)
-//        {
-//            try
-//            {
-//                ResponseType type = ResponseType.Success;
-//                _db.DeleteUtilisateur(id);
+        [HttpPut]
+        [Route("api/[controller]/UpdateUser")]
+        public IActionResult UpdateUser([FromBody] UserModel model)
+        {
+            try
+            {
+                ResponseType type = ResponseType.Success;
+                string salt;
+                model.Password = PasswordHasher.HashPassword(model.Password, out salt);
+                _db.UpdateUser(model, salt);
 
-//                _userRepository.DeleteUser(id);
+                var utilisateurEntity = new User
+                {
+                    Id = model.Id,
+                    Email = model.Email,
+                    Password = model.Password,
+                    Salt = salt,
+                };
+                _userRepository.UpdateUser(utilisateurEntity);
 
-//                return Ok(ResponseHandler.GetAppResponse(type, "Suppression réussie."));
-//            }
-//            catch (Exception ex)
-//            {
-//                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
-//            }
-//        }
-//    }
-//}
+                return Ok(ResponseHandler.GetAppResponse(type, model));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
+            }
+        }
+
+        [HttpDelete]
+        [Route("api/[controller]/DeleteUser/{id}")]
+        public IActionResult DeleteUser(int id)
+        {
+            try
+            {
+                ResponseType type = ResponseType.Success;
+                _db.DeleteUser(id);
+                _userRepository.DeleteUser(id);
+                return Ok(ResponseHandler.GetAppResponse(type, "Suppression réussie."));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ResponseHandler.GetExceptionResponse(ex));
+            }
+        }
+    }
+}

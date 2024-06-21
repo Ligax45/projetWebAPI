@@ -4,8 +4,9 @@
     "\\ProjetWebApi",
     "\\ProjetWebApi\\ProjetWebApi",
     "\\ProjetWebApi\\ProjetWebApi\\Controllers",
-    "\\ProjetWebApi\\ProjetWebApi\\Data",
-    "\\ProjetWebApi\\ProjetWebApi\\Repositories"
+    "\\ProjetWebApi\\ProjetWebApi\\Controllers\\Authentication",
+    "\\ProjetWebApi\\ProjetWebApi\\Services"
   ],
+  "SelectedNode": "\\ProjetWebApi\\ProjetWebApi.sln",
   "PreviewInSolutionExplorer": false
 }

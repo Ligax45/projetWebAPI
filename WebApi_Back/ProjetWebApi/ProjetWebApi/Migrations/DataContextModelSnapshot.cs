@@ -22,7 +22,7 @@ namespace ProjetWebApi.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("ProjetWebApi.Data.Entities.Annonce", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,21 +37,21 @@ namespace ProjetWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("ProfilId")
+                    b.Property<int>("ProfileId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Titre")
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProfilId");
+                    b.HasIndex("ProfileId");
 
-                    b.ToTable("annonce");
+                    b.ToTable("post");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profil", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profile", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -59,25 +59,25 @@ namespace ProjetWebApi.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Nom")
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Prenom")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("UtilisateurId")
+                    b.Property<int>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UtilisateurId");
+                    b.HasIndex("UserId");
 
-                    b.ToTable("profil");
+                    b.ToTable("profile");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Data.Entities.Utilisateur", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -98,29 +98,29 @@ namespace ProjetWebApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("utilisateur");
+                    b.ToTable("user");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Data.Entities.Annonce", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Post", b =>
                 {
-                    b.HasOne("ProjetWebApi.Data.Entities.Profil", "Profil")
+                    b.HasOne("ProjetWebApi.Data.Entities.Profile", "Profile")
                         .WithMany()
-                        .HasForeignKey("ProfilId")
+                        .HasForeignKey("ProfileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Profil");
+                    b.Navigation("Profile");
                 });
 
-            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profil", b =>
+            modelBuilder.Entity("ProjetWebApi.Data.Entities.Profile", b =>
                 {
-                    b.HasOne("ProjetWebApi.Data.Entities.Utilisateur", "Utilisateur")
+                    b.HasOne("ProjetWebApi.Data.Entities.User", "User")
                         .WithMany()
-                        .HasForeignKey("UtilisateurId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Utilisateur");
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

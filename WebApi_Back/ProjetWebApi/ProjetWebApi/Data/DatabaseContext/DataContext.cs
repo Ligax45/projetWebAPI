@@ -7,8 +7,8 @@ namespace ProjetWebApi.Data.DatabaseContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-        public DbSet<Utilisateur> Utilisateurs { get; set; }
-        public DbSet<Profil> Profils { get; set; }
-        public DbSet<Annonce> Annonces { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
+        public DbSet<Post> Posts { get; set; }
     }
 }

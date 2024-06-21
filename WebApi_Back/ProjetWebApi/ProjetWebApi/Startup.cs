@@ -1,5 +1,6 @@
 ﻿using ProjetWebApi.Data.DatabaseContext;
 using ProjetWebApi.Repositories;
+using ProjetWebApi.Services;
 
 namespace ProjetWebApi
 {
@@ -21,6 +22,8 @@ namespace ProjetWebApi
 
             // Enregistre DataContext et autres services nécessaires
             services.AddScoped<DataContext>();
+
+            services.AddScoped<DbHelper>();
         }
     }
 }
