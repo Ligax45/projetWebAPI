@@ -4,13 +4,13 @@ using StackExchange.Redis;
 
 namespace ProjetWebApi.Repositories
 {
-    public class UserRepository
+    public class UserRepositoryRedis
     {
         private static readonly ConnectionMultiplexer redis = ConnectionMultiplexer
             .Connect("redis-19723.c258.us-east-1-4.ec2.redns.redis-cloud.com:19723,password=3aWyyDQO7gJZR2tqLnY35gk1C2ZxbBT8");
         private readonly IDatabase _database;
 
-        public UserRepository()
+        public UserRepositoryRedis()
         {
             _database = redis.GetDatabase();
         }

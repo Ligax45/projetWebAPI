@@ -12,12 +12,12 @@ namespace ProjetWebApi.Controllers
     public class ProfileController : ControllerBase
     {
         private readonly DbHelper _db;
-        private readonly ProfilRepository _profilRepository;
+        private readonly ProfilRepositoryRedis _profilRepository;
 
         public ProfileController(DataContext dataContext)
         {
             _db = new DbHelper(dataContext);
-            _profilRepository = new ProfilRepository();
+            _profilRepository = new ProfilRepositoryRedis();
         }
 
         [HttpGet]
@@ -57,7 +57,7 @@ namespace ProjetWebApi.Controllers
                     User = new User { Id = model.UserId }
 
                 };
-                _profilRepository.CreateProfil(profilEntity);
+                //_profilRepository.CreateProfil(profilEntity);
 
                 return Ok(ResponseHandler.GetAppResponse(ResponseType.Success, model));
             }
@@ -83,7 +83,7 @@ namespace ProjetWebApi.Controllers
                     LastName = model.LastName,
                     User = new User { Id = model.UserId }
                 };
-                _profilRepository.UpdateProfil(profilEntity);
+                //_profilRepository.UpdateProfil(profilEntity);
 
                 return Ok(ResponseHandler.GetAppResponse(type, model));
             }
@@ -101,7 +101,7 @@ namespace ProjetWebApi.Controllers
             {
                 ResponseType type = ResponseType.Success;
                 _db.DeleteProfile(id);
-                _profilRepository.DeleteProfil(id);
+                //_profilRepository.DeleteProfil(id);
                 return Ok(ResponseHandler.GetAppResponse(type, "Suppression réussie."));
             }
             catch (Exception ex)

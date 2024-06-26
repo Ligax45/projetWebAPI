@@ -2,7 +2,6 @@
   "ExpandedNodes": [
     "",
     "\\ProjetWebApi",
-    "\\ProjetWebApi\\ProjetWebApi",
     "\\ProjetWebApi\\ProjetWebApi\\Controllers",
     "\\ProjetWebApi\\ProjetWebApi\\Controllers\\Authentication",
     "\\ProjetWebApi\\ProjetWebApi\\Services"

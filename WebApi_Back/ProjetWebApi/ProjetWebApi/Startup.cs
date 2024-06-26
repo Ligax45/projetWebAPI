@@ -18,7 +18,7 @@ namespace ProjetWebApi
             services.AddControllers();
 
             // Enregistre UserRepository comme service
-            services.AddSingleton<UserRepository>();
+            services.AddSingleton<UserRepositoryRedis>();
 
             // Enregistre DataContext et autres services nécessaires
             services.AddScoped<DataContext>();

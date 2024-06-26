@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9766FF72-DC25-46CC-AF19-0956866AEC60}|TestUnitaire\\TestUnitaire.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\testunitaire\\testuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9766FF72-DC25-46CC-AF19-0956866AEC60}|TestUnitaire\\TestUnitaire.csproj|solutionrelative:testunitaire\\testuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\services\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\services\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,15 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TestUser.cs",
-              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\TestUnitaire\\TestUser.cs",
-              "RelativeDocumentMoniker": "TestUnitaire\\TestUser.cs",
-              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\TestUnitaire\\TestUser.cs",
-              "RelativeToolTip": "TestUnitaire\\TestUser.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAYwDkAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "ProjetWebApi\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "ProjetWebApi\\Controllers\\ProfileController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T08:48:24.965Z",
+              "WhenOpened": "2024-06-26T19:43:37.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbHelper.cs",
+              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Services\\DbHelper.cs",
+              "RelativeDocumentMoniker": "ProjetWebApi\\Services\\DbHelper.cs",
+              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Services\\DbHelper.cs",
+              "RelativeToolTip": "ProjetWebApi\\Services\\DbHelper.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T19:43:11.3Z",
               "EditorCaption": ""
             }
           ]

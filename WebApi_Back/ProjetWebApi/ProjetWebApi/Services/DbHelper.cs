@@ -27,11 +27,6 @@ namespace ProjetWebApi.Services
             return response;
         }
 
-        /// <summary>
-        /// GetById
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         public UserModel GetUserById(int id)
         {
             var row = _context.Users.FirstOrDefault(d => d.Id == id);

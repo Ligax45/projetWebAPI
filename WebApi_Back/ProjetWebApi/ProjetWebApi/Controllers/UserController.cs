@@ -12,12 +12,12 @@ namespace ProjetWebApi.Controllers
     public class UserController : ControllerBase
     {
         private readonly DbHelper _db;
-        private readonly UserRepository _userRepository;
+        private readonly UserRepositoryRedis _userRepository;
 
         public UserController(DataContext dataContext)
         {
             _db = new DbHelper(dataContext);
-            _userRepository = new UserRepository();
+            _userRepository = new UserRepositoryRedis();
         }
 
         [HttpGet]
@@ -92,7 +92,7 @@ namespace ProjetWebApi.Controllers
                     Password = model.Password,
                     Salt = salt,
                 };
-                _userRepository.CreateUser(utilisateurEntity);
+                //_userRepository.CreateUser(utilisateurEntity);
 
                 return Ok(ResponseHandler.GetAppResponse(ResponseType.Success, model));
             }
@@ -120,7 +120,7 @@ namespace ProjetWebApi.Controllers
                     Password = model.Password,
                     Salt = salt,
                 };
-                _userRepository.UpdateUser(utilisateurEntity);
+                //_userRepository.UpdateUser(utilisateurEntity);
 
                 return Ok(ResponseHandler.GetAppResponse(type, model));
             }
@@ -138,7 +138,7 @@ namespace ProjetWebApi.Controllers
             {
                 ResponseType type = ResponseType.Success;
                 _db.DeleteUser(id);
-                _userRepository.DeleteUser(id);
+                //_userRepository.DeleteUser(id);
                 return Ok(ResponseHandler.GetAppResponse(type, "Suppression réussie."));
             }
             catch (Exception ex)
