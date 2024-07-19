@@ -76,7 +76,7 @@ namespace ProjetWebApi.Controllers
                 ResponseType type = ResponseType.Success;
                 _db.UpdateProfile(model);
 
-                var profilEntity = new Profile
+                Profile profilEntity = new Profile
                 {
                     Id = model.Id,
                     FirstName = model.FirstName,

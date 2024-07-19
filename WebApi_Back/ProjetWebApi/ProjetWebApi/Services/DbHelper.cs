@@ -80,7 +80,7 @@ namespace ProjetWebApi.Services
             }
         }
 
-        //Profil
+        //Profil créer un ProfilHelper
         public List<ProfileModel> GetAllProfiles()
         {
             List<ProfileModel> response = new List<ProfileModel>();
