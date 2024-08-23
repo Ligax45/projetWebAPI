@@ -7,7 +7,7 @@ namespace ProjetWebApi.Repositories
     public class UserRepositoryRedis
     {
         private static readonly ConnectionMultiplexer redis = ConnectionMultiplexer
-            .Connect("redis-19723.c258.us-east-1-4.ec2.redns.redis-cloud.com:19723,password=3aWyyDQO7gJZR2tqLnY35gk1C2ZxbBT8");
+            .Connect("redis-11955.c339.eu-west-3-1.ec2.redns.redis-cloud.com:11955,password=PN5bWjv3H7ZKeTv9RwIkAJcNPLpMYpix");
         private readonly IDatabase _database;
 
         public UserRepositoryRedis()

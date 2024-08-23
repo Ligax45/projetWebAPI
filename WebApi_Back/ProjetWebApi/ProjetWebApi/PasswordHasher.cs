@@ -27,6 +27,7 @@ namespace ProjetWebApi
             }
         }
 
+        //TODO faire la méthode (pour vérifier et non hasher)
         public static bool VerifyPassword(string password, string salt, string hash)
         {
             string saltedPassword = salt + password;

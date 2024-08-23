@@ -92,7 +92,7 @@ namespace ProjetWebApi.Controllers
                     Password = model.Password,
                     Salt = salt,
                 };
-                //_userRepository.CreateUser(utilisateurEntity);
+                _userRepository.CreateUser(utilisateurEntity);
 
                 return Ok(ResponseHandler.GetAppResponse(ResponseType.Success, model));
             }
