@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\repositories\\userrepositoryredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\repositories\\userrepositoryredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|c:\\users\\clem-\\desktop\\devweb\\projetwebapi\\webapi_back\\projetwebapi\\projetwebapi\\repositories\\userrepositoryredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E726CE4-2EE2-44C4-907F-F7B331472F21}|ProjetWebApi\\ProjetWebApi.csproj|solutionrelative:projetwebapi\\repositories\\userrepositoryredis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "ProjetWebApi\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "ProjetWebApi\\Controllers\\ProfileController.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAkwGYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T18:22:04.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Program.cs",
               "RelativeDocumentMoniker": "ProjetWebApi\\Program.cs",
@@ -42,34 +59,31 @@
               "RelativeToolTip": "ProjetWebApi\\Program.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACYAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T09:58:00.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T09:58:00.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "ProjetWebApi\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "ProjetWebApi\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAowHwAAABHAAAA",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAgwEsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T09:35:46.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T09:35:46.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserRepositoryRedis.cs",
               "DocumentMoniker": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Repositories\\UserRepositoryRedis.cs",
               "RelativeDocumentMoniker": "ProjetWebApi\\Repositories\\UserRepositoryRedis.cs",
               "ToolTip": "C:\\Users\\clem-\\Desktop\\DevWeb\\projetWebAPI\\WebApi_Back\\ProjetWebApi\\ProjetWebApi\\Repositories\\UserRepositoryRedis.cs",
               "RelativeToolTip": "ProjetWebApi\\Repositories\\UserRepositoryRedis.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAIAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T09:14:35.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T09:14:35.006Z"
             }
           ]
         }
